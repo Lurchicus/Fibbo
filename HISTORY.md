@@ -1,6 +1,24 @@
 # History (git log)
 
 
+## Commit 11 
+| Item | Info | 
+| :--- | :--- |
+| Date | Sat Jan 25 13:02:22 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | Fixed the leading a bug (a typo of course). |
+| commit | 41b1ce418da30c5241746154f59509a9ed9ca973 |
+
+
+## Commit 10 
+| Item | Info | 
+| :--- | :--- |
+| Date | Sat Jan 25 12:57:03 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | History update take two |
+| commit | fe9d2b163a81b09f06c369fe0aa91d785fa437e3 |
+
+
 ## Commit 9 
 | Item | Info | 
 | :--- | :--- |
