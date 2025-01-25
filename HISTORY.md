@@ -1,6 +1,24 @@
 # History (git log)
 
 
+## Commit 8 
+| Item | Info | 
+| :--- | :--- |
+| Date | Sat Jan 25 12:50:33 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | Added an example run to the readme file |
+| commit | f5d0998387b23bee93bc874b5f25bf56cebbfd3c |
+
+
+## Commit 7 
+| Item | Info | 
+| :--- | :--- |
+| Date | Sat Jan 25 12:39:46 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | History update |
+| commit | b5362e01313e6ad2ec5c90d68457917ab5a5fb8b |
+
+
 ## Commit 6 
 | Item | Info | 
 | :--- | :--- |
