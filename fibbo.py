@@ -44,7 +44,7 @@ Page = ''
 for FibNum in range(0,NumPlaces+1):
     Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
     if len(Line) + len(Fibb) >= WrapAt:
-        Line += "\na"
+        Line += "\n"
         Page += Line
         Line = Fibb
     else:
