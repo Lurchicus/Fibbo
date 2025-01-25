@@ -1,6 +1,15 @@
 # History (git log)
 
 
+## Commit 4 
+| Item | Info | 
+| :--- | :--- |
+| Date | Fri Jan 24 23:24:29 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | Done except for one bug... after the first printed line, all the others are prefixed with an a. Not sure why. |
+| commit | bdbdeec9eb8a43cd4d7d9b8426a53ef46043d634 |
+
+
 ## Commit 3 
 | Item | Info | 
 | :--- | :--- |
