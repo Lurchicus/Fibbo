@@ -10,6 +10,8 @@ function 1 to 10 digit fibonacci numbers.
 """
 
 import cmath
+import sys
+
 
 def getFib(n):
     """
@@ -24,20 +26,31 @@ def getFib(n):
 
 
 #Demo using the function
+NumPlaces = 100
+WrapAt = 80
+#print(sys.argv)
+if len(sys.argv) == 3:
+    NumPlaces = int(sys.argv[1])
+    WrapAt = int(sys.argv[2])
+elif len(sys.argv) == 2:
+    NumPlaces = int(sys.argv[1])
+    WrapAt = 80
+print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
+print(" HowMany: " + str(NumPlaces))
+print(" LineLen: " + str(WrapAt))
 Line = ''
 Fibb = ''
 Page = ''
-NumPlaces = 100
 for FibNum in range(0,NumPlaces+1):
     Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
-    if len(Line) + len(Fibb) >= 80:
+    if len(Line) + len(Fibb) >= WrapAt:
         Line += "\na"
         Page += Line
         Line = Fibb
     else:
         Line += Fibb
 if len(Fibb) > 0:
-    if len(Line) + len(Fibb) >= 80:
+    if len(Line) + len(Fibb) >= WrapAt:
         Page += Line + "\n"
         Line = Fibb
         Fibb = ''
