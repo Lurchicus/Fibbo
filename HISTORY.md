@@ -1,6 +1,15 @@
 # History (git log)
 
 
+## Commit 3 
+| Item | Info | 
+| :--- | :--- |
+| Date | Fri Jan 24 15:55:02 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | Added updated log and gitignore file |
+| commit | 0289753437d3442f987e293f50b3b7cd4a69530d |
+
+
 ## Commit 2 
 | Item | Info | 
 | :--- | :--- |

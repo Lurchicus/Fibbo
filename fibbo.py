@@ -25,20 +25,24 @@ def getFib(n):
 
 #Demo using the function
 Line = ''
-Temp = ''
+Fibb = ''
 Page = ''
-NumPlaces = 40
-for FibNum in range(0,NumPlaces):
-    #s = s + '(' + str(m) + ')' + str(getFib(m)) + ' '
-    #s = s + str(getFib(m)) + ' '
-    Temp = '(' + str(FibNum) + ')' + str(getFib(FibNum)) + ' '
-    if len(Line) + len(Temp) > 80:
-        #Page = Page + Line
-        Page = Page + '\n'
-        Line = Temp
+NumPlaces = 100
+for FibNum in range(0,NumPlaces+1):
+    Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
+    if len(Line) + len(Fibb) >= 80:
+        Line += "\na"
+        Page += Line
+        Line = Fibb
     else:
-        Line = Line + Temp    
-    Page = Page + Line
-Vals = Page.split(' ')
-Final = Vals[-1*NumPlaces:]
-print(Page)
+        Line += Fibb
+if len(Fibb) > 0:
+    if len(Line) + len(Fibb) >= 80:
+        Page += Line + "\n"
+        Line = Fibb
+        Fibb = ''
+    else:
+        Page += Line + "\n"
+# This keeps printing a leading "a" after the first line. 
+# Not sure why.
+print(Page) 
