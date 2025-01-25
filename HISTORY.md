@@ -1,6 +1,24 @@
 # History (git log)
 
 
+## Commit 6 
+| Item | Info | 
+| :--- | :--- |
+| Date | Sat Jan 25 12:36:14 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | Added support to accept arguments from the command line. Also added the code for getFib(n) into the readme file. |
+| commit | ee081a2079f02df0c835d0300863c4a911e25b9d |
+
+
+## Commit 5 
+| Item | Info | 
+| :--- | :--- |
+| Date | Fri Jan 24 23:30:54 2025 -0500 |
+| Author | Dan Rhea <dan.rhea@gmail.com> |
+| Message | History update. |
+| commit | b298ac4a0d34ffea87b15adb3ec44d4b6ee4f32e |
+
+
 ## Commit 4 
 | Item | Info | 
 | :--- | :--- |
