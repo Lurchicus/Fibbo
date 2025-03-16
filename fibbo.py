@@ -25,37 +25,45 @@ def getFib(n):
     return int(fn)
 
 
-#Demo using the function
-NumPlaces = 100
-WrapAt = 80
-#print(sys.argv)
-if len(sys.argv) == 3:
-    NumPlaces = int(sys.argv[1])
-    WrapAt = int(sys.argv[2])
-elif len(sys.argv) == 2:
-    NumPlaces = int(sys.argv[1])
+def main():
+    """
+    Main routine to demonstrate the getFib function.
+    """
+    #Demo using the function
+    NumPlaces = 100
     WrapAt = 80
-print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
-print(" HowMany: " + str(NumPlaces))
-print(" LineLen: " + str(WrapAt))
-Line = ''
-Fibb = ''
-Page = ''
-for FibNum in range(0,NumPlaces+1):
-    Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
-    if len(Line) + len(Fibb) >= WrapAt:
-        Line += "\n"
-        Page += Line
-        Line = Fibb
-    else:
-        Line += Fibb
-if len(Fibb) > 0:
-    if len(Line) + len(Fibb) >= WrapAt:
-        Page += Line + "\n"
-        Line = Fibb
-        Fibb = ''
-    else:
-        Page += Line + "\n"
-# This keeps printing a leading "a" after the first line. 
-# Not sure why.
-print(Page) 
+    #print(sys.argv)
+    if len(sys.argv) == 3:
+        NumPlaces = int(sys.argv[1])
+        WrapAt = int(sys.argv[2])
+    elif len(sys.argv) == 2:
+        NumPlaces = int(sys.argv[1])
+        WrapAt = 80
+    print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
+    print(" HowMany: " + str(NumPlaces))
+    print(" LineLen: " + str(WrapAt))
+    Line = ''
+    Fibb = ''
+    Page = ''
+    for FibNum in range(0,NumPlaces+1):
+        Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
+        if len(Line) + len(Fibb) >= WrapAt:
+            Line += "\n"
+            Page += Line
+            Line = Fibb
+        else:
+            Line += Fibb
+    if len(Fibb) > 0:
+        if len(Line) + len(Fibb) >= WrapAt:
+            Page += Line + "\n"
+            Line = Fibb
+            Fibb = ''
+        else:
+            Page += Line + "\n"
+    # This keeps printing a leading "a" after the first line.
+    # Not sure why.
+    print(Page)
+
+
+if __name__ == "__main__":
+    main()

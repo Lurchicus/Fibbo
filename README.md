@@ -9,9 +9,12 @@ looping or recursion.
 Also included is a calling routine that loops through the
 function 1 to n fibonacci numbers.
 
-Here is the actual function. I will try to track down the original formula. The formula came from an article I read on the internet that I have not been able to find since. It can also be found in a Wikipedia article (link to be added once I find it).
+Here is the actual function. It uses Binet's Formula. The formula can be found here "https://en.wikipedia.org/wiki/Fibonacci_sequence".
 
-```
+Modified 3/15/2025 to use the "if __name__ == "__main__" construct.
+
+
+```python3
 def getFib(n):
     """
     Given which fibonacci number we want, calculate its value.
@@ -26,7 +29,7 @@ def getFib(n):
 
 Example rum:
 
-```
+```text
 > python3 fibbo.py 100 80
 python3 fibbo.py [HowMany(100) [LineLen(80)]]
  HowMany: 100
