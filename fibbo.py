@@ -11,7 +11,7 @@ function 1 to 10 digit fibonacci numbers.
 
 import cmath
 import sys
-
+from rich import print
 
 def getFib(n):
     """

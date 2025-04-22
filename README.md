@@ -13,6 +13,7 @@ Here is the actual function. It uses Binet's Formula. The formula can be found h
 
 Modified 3/15/2025 to use the "if __name__ == "__main__" construct.
 
+Added uv package managment to the project. Also added the rich package.
 
 ```python3
 def getFib(n):
