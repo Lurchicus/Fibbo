@@ -13,15 +13,16 @@ import cmath
 import sys
 from rich import print
 
-def getFib(n):
+def getFib(n) -> int:
     """
     Given which fibonacci number we want, calculate its value.
     """
-    lsa = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
-    rsa = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
-    fib = lsa-rsa
-    #coerce to real so we can round the complex result
-    fn = round(fib.real)
+    lsa: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
+    rsa: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
+    fib: complex = lsa-rsa
+    # coerce complex to real so we can round the complex result an rerurn
+    # the result as an int.
+    fn: int = round(fib.real)
     return int(fn)
 
 
@@ -30,39 +31,38 @@ def main():
     Main routine to demonstrate the getFib function.
     """
     #Demo using the function
-    NumPlaces = 100
-    WrapAt = 80
-    #print(sys.argv)
+    num_places: int = 100
+    wrap_at: int = 80
     if len(sys.argv) == 3:
-        NumPlaces = int(sys.argv[1])
-        WrapAt = int(sys.argv[2])
+        num_places = int(sys.argv[1])
+        wrap_at = int(sys.argv[2])
     elif len(sys.argv) == 2:
-        NumPlaces = int(sys.argv[1])
-        WrapAt = 80
+        num_places = int(sys.argv[1])
+        wrap_at = 80
     print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
-    print(" HowMany: " + str(NumPlaces))
-    print(" LineLen: " + str(WrapAt))
-    Line = ''
-    Fibb = ''
-    Page = ''
-    for FibNum in range(0,NumPlaces+1):
-        Fibb = "(" + str(FibNum) + "): " + str(getFib(FibNum)) + " "
-        if len(Line) + len(Fibb) >= WrapAt:
-            Line += "\n"
-            Page += Line
-            Line = Fibb
+    print(f" HowMany: {str(num_places)}")
+    print(f" LineLen: {str(wrap_at)}")
+    line: str = ''
+    fibb: str = ''
+    page: str = ''
+    for fibb_num in range(0,num_places+1):
+        fibb = "(" + str(fibb_num) + "): " + str(getFib(fibb_num)) + " "
+        if len(line) + len(fibb) >= wrap_at:
+            line += "\n"
+            page += line
+            line = fibb
         else:
-            Line += Fibb
-    if len(Fibb) > 0:
-        if len(Line) + len(Fibb) >= WrapAt:
-            Page += Line + "\n"
-            Line = Fibb
-            Fibb = ''
+            line += fibb
+    if len(fibb) > 0:
+        if len(line) + len(fibb) >= wrap_at:
+            page += line + "\n"
+            line = fibb
+            fibb = ''
         else:
-            Page += Line + "\n"
+            page += line + "\n"
     # This keeps printing a leading "a" after the first line.
     # Not sure why.
-    print(Page)
+    print(page)
 
 
 if __name__ == "__main__":
