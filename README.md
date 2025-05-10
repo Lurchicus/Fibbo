@@ -16,15 +16,16 @@ Modified 3/15/2025 to use the "if __name__ == "__main__" construct.
 Added uv package managment to the project. Also added the rich package.
 
 ```python3
-def getFib(n):
+def getFib(n) -> int:
     """
     Given which fibonacci number we want, calculate its value.
     """
-    lsa = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
-    rsa = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
-    fib = lsa-rsa
-    #coerce to real so we can round the complex result
-    fn = round(fib.real)
+    left_side: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
+    right_side: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
+    fib_value: complex = left_side-right_side
+    # coerce complex to real so we can round the complex result and return
+    # the result as an int.
+    fn: int = round(fib_value.real)
     return int(fn)
 ```
 

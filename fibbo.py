@@ -17,12 +17,12 @@ def getFib(n) -> int:
     """
     Given which fibonacci number we want, calculate its value.
     """
-    lsa: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
-    rsa: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
-    fib: complex = lsa-rsa
-    # coerce complex to real so we can round the complex result an rerurn
+    left_side: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
+    right_side: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
+    fib_value: complex = left_side-right_side
+    # coerce complex to real so we can round the complex result and rerurn
     # the result as an int.
-    fn: int = round(fib.real)
+    fn: int = round(fib_value.real)
     return int(fn)
 
 
@@ -30,7 +30,8 @@ def main():
     """
     Main routine to demonstrate the getFib function.
     """
-    #Demo using the function
+    # Demo using the function...
+    # Process command line arguments
     num_places: int = 100
     wrap_at: int = 80
     if len(sys.argv) == 3:
@@ -42,6 +43,8 @@ def main():
     print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
     print(f" HowMany: {str(num_places)}")
     print(f" LineLen: {str(wrap_at)}")
+    # Collect results into a "page". This is not really for pagination,
+    # it's actually to line wrap large output strings.
     line: str = ''
     fibb: str = ''
     page: str = ''
@@ -60,8 +63,6 @@ def main():
             fibb = ''
         else:
             page += line + "\n"
-    # This keeps printing a leading "a" after the first line.
-    # Not sure why.
     print(page)
 
 
