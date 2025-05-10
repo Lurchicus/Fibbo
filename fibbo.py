@@ -23,7 +23,7 @@ def getFib(n) -> int:
     # coerce complex to real so we can round the complex result and rerurn
     # the result as an int.
     fn: int = round(fib_value.real)
-    return int(fn)
+    return fn
 
 
 def main():
