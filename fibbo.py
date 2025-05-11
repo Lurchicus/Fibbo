@@ -23,8 +23,7 @@ def getFib(fib_num: int) -> int:
     fib_value: complex = left_side-right_side
     # coerce complex to real so we can round the complex result and rerurn
     # the result as an int.
-    fn: int = round(fib_value.real)
-    return fn
+    return int(round(fib_value.real))
 
 
 def main():
