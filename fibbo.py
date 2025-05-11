@@ -13,17 +13,13 @@ import cmath
 import sys
 import rich
 
-<<<<<<< HEAD
-def getFib(n):
 
-=======
-def getFib(n) -> int:
->>>>>>> 3bf602c0a46abce7c0609fcde8720fec08b430f4
+def getFib(fib_num: int) -> int:
     """
     Given which fibonacci number we want, calculate its value.
     """
-    left_side: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), n)
-    right_side: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), n)
+    left_side: complex = (1 / cmath.sqrt(5)) * pow(((1 + cmath.sqrt(5)) / 2), fib_num)
+    right_side: complex = (1 / cmath.sqrt(5)) * pow(((1 - cmath.sqrt(5)) / 2), fib_num)
     fib_value: complex = left_side-right_side
     # coerce complex to real so we can round the complex result and rerurn
     # the result as an int.
@@ -45,9 +41,9 @@ def main():
     elif len(sys.argv) == 2:
         num_places = int(sys.argv[1])
         wrap_at = 80
-    print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
-    print(f" HowMany: {str(num_places)}")
-    print(f" LineLen: {str(wrap_at)}")
+    rich.print("python3 fibbo.py [HowMany(100) [LineLen(80)]]")
+    rich.print(f" HowMany: {str(num_places)}")
+    rich.print(f" LineLen: {str(wrap_at)}")
     # Collect results into a "page". This is not really for pagination,
     # it's actually to line wrap large output strings.
     line: str = ''
@@ -68,7 +64,7 @@ def main():
             fibb = ''
         else:
             page += line + "\n"
-    print(page)
+    rich.print(page)
 
 
 if __name__ == "__main__":
